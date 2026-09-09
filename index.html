@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LAIRR — Laboratory of AI and Robotics Research</title>
+<meta name="description" content="LAIRR is Heriot-Watt University's Laboratory of AI and Robotics Research, based at the UK National Robotarium — advancing intelligent robotics and delivering Cognition-as-a-Service to industry." />
+<link rel="icon" type="image/jpeg" href="logos/LAIRR_logo_small.jpg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<a href="#home" class="skip-link">Skip to content</a>
+<div class="bg-glow" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"><img src="logos/LAIRR_logo_small.jpg" alt="" /></span>
+    <span class="brand-text">
+      <span class="name">LAIRR</span>
+      <span class="sub">Laboratory of AI and Robotics Research</span>
+    </span>
+  </div>
+
+  <nav class="nav-tabs" aria-label="Primary">
+    <button data-tab="home" aria-selected="true">Home</button>
+    <button data-tab="research" aria-selected="false">Research</button>
+    <button data-tab="caas" aria-selected="false">CaaS</button>
+    <button data-tab="projects" aria-selected="false">Projects</button>
+    <button data-tab="team" aria-selected="false">Team</button>
+    <button data-tab="contact" aria-selected="false">Contact</button>
+  </nav>
+
+  <div class="topbar-actions">
+    <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.7 6.7 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+    <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-panel" id="mobile-panel" hidden>
+    <button data-tab="home" aria-selected="true">Home</button>
+    <button data-tab="research" aria-selected="false">Research</button>
+    <button data-tab="caas" aria-selected="false">CaaS</button>
+    <button data-tab="projects" aria-selected="false">Projects</button>
+    <button data-tab="team" aria-selected="false">Team</button>
+    <button data-tab="contact" aria-selected="false">Contact</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HOME ============ -->
+  <section class="view" id="home">
+    <div class="hero">
+      <div class="hero-media">
+        <div class="hero-content">
+          <div class="inner">
+            <span class="hero-badge"><span class="dot"></span> Heriot-Watt University &middot; UK National Robotarium</span>
+            <h1>Cognitive intelligence, <span class="grad">built for the real world.</span></h1>
+            <p class="tagline">Discover. Innovate. Impact.</p>
+            <p class="lead">LAIRR is Heriot-Watt University's Laboratory of AI and Robotics Research — translating deep-tech breakthroughs in intelligent robotics into agile, deployable cognitive architectures for industry.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-tab="research">Explore our research
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+              <button class="btn btn-ghost" data-tab="caas">Partner with CaaS</button>
+            </div>
+          </div>
+          <div class="hero-globe">
+            <canvas id="lairr-globe" role="img" aria-label="Interactive spinning globe showing Heriot-Watt's campuses in Edinburgh, Dubai, and Malaysia, connected to LAIRR at the Dubai campus. Drag to rotate."></canvas>
+            <span class="globe-hint">Global reach &middot; Edinburgh &middot; Dubai &middot; Malaysia</span>
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="stat-strip">
+          <div class="stat"><div class="num">6</div><div class="label">Core technical expertise areas</div></div>
+          <div class="stat"><div class="num">6</div><div class="label">Industrial application domains</div></div>
+          <div class="stat"><div class="num">3+</div><div class="label">Active funded research projects</div></div>
+          <div class="stat"><div class="num">1</div><div class="label">Home at the UK National Robotarium</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section>
+        <div class="section-head reveal">
+          <span class="eyebrow">Overview</span>
+          <h2>A dual mission: knowledge and impact.</h2>
+          <p>LAIRR operates at the intersection of industry-leading disciplines, translating deep-tech laboratory breakthroughs into agile, deployable, and impactful cognitive architectures.</p>
+        </div>
+        <div class="mission-grid">
+          <div class="mission-card reveal">
+            <div class="icon-tile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3.5a3 3 0 0 0-3 3v.3A3.2 3.2 0 0 0 4.5 9.8v.4A3 3 0 0 0 3 13a3 3 0 0 0 1.9 2.8 3.3 3.3 0 0 0 3.1 4.2h.5a2 2 0 0 0 2-2V5.5a2 2 0 0 0-1-1.7Z"/><path d="M14.5 3.5a3 3 0 0 1 3 3v.3a3.2 3.2 0 0 1 2 2.9v.4A3 3 0 0 1 21 13a3 3 0 0 1-1.9 2.8 3.3 3.3 0 0 1-3.1 4.2h-.5a2 2 0 0 1-2-2V5.5a2 2 0 0 1 1-1.7Z"/></svg>
+            </div>
+            <h3>Advance scientific knowledge</h3>
+            <p>Driving world-leading research in intelligent robotics and AI — moving beyond structured environments by infusing intelligence into the robot itself.</p>
+          </div>
+          <div class="mission-card reveal">
+            <div class="icon-tile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M8 12a4 4 0 1 1 4-4M8 12a4 4 0 1 0 4 4M16 12a4 4 0 1 0-4-4M16 12a4 4 0 1 1-4 4"/></svg>
+            </div>
+            <h3>Bridge the gap to industry</h3>
+            <p>Through our <strong>Cognition-as-a-Service</strong> (CaaS) initiative, we solve complex, real-world challenges for partners — fostering economic growth, high-value jobs, and global competitiveness.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head reveal">
+          <span class="eyebrow">Find your way in</span>
+          <h2>Explore the lab.</h2>
+        </div>
+        <div class="quicklinks">
+          <button class="quicklink reveal" data-tab="research" style="text-align:left;">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+            <h3>Research</h3>
+            <p>Six core areas of technical expertise across robotics and AI.</p>
+            <span class="arrow">View topics <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="quicklink reveal" data-tab="caas" style="text-align:left;">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-6h4v6"/></svg></div>
+            <h3>CaaS</h3>
+            <p>A de-risked pathway for industry to adopt cognitive robotics.</p>
+            <span class="arrow">See offerings <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="quicklink reveal" data-tab="projects" style="text-align:left;">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a1 1 0 0 1 1-1h4l2 2h8a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/></svg></div>
+            <h3>Projects</h3>
+            <p>Live grants and platforms — from marine autonomy to perception.</p>
+            <span class="arrow">See what we're building <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </button>
+          <button class="quicklink reveal" data-tab="team" style="text-align:left;">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 5 18.5V20M12 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM21 20v-1.5a3 3 0 0 0-2.2-2.9M15.2 4.1a3.5 3.5 0 0 1 0 6.8"/></svg></div>
+            <h3>Team</h3>
+            <p>Robot learning to social psychology and rehabilitation.</p>
+            <span class="arrow">Meet the people <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section class="view" id="research">
+    <div class="wrap">
+      <section style="padding-top:56px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Expertise &amp; research topics</span>
+          <h2>Intelligence built into the robot itself.</h2>
+          <p>We move beyond "structured environments" by infusing intelligence into the robot itself, allowing for operation in complex, dynamic, and unpredictable settings.</p>
+        </div>
+
+        <div class="foundation reveal">
+          <div class="foundation-copy">
+            <h3>Our strategic foundation</h3>
+            <p>LAIRR operates at the intersection of world-class academic research and industrial application. We are part of the <strong>Global Research Institute (GRI) in AI and Robotics</strong> at Heriot-Watt University, leveraging this prestigious ecosystem to push the boundaries of cognitive intelligence.</p>
+            <p>Our research is physically and strategically anchored within the <strong>UK National Robotarium (UKNR)</strong>. This unique partnership gives us access to unparalleled state-of-the-art testing facilities and high-performance computing — enabling us to translate complex theoretical models into real-world, industry-ready solutions.</p>
+          </div>
+          <div class="foundation-list">
+            <div class="row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg>
+              <div><span class="k">Global Research Institute</span><span class="v">AI and Robotics, Heriot-Watt University</span></div>
+            </div>
+            <div class="row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 12l2 2 4-4"/></svg>
+              <div><span class="k">UK National Robotarium</span><span class="v">State-of-the-art testing &amp; high-performance compute</span></div>
+            </div>
+            <div class="row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M6 19V9l6-4 6 4v10"/></svg>
+              <div><span class="k">Dubai &amp; UAE anchored</span><span class="v">Aligned with the UAE National AI Strategy 2031</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subhead reveal">
+          <h3>Core technical expertise</h3>
+          <span class="count">06 AREAS</span>
+        </div>
+        <div class="grid grid-3" style="margin-bottom:60px;">
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 21a5 5 0 0 1-2-9.6 4.5 4.5 0 0 1 5.8-5.7A5 5 0 0 1 19 8.5a4.5 4.5 0 0 1-1 8.9M9 21v-4a3 3 0 0 1 6 0v4M9 21h6"/></svg></div>
+            <h3>Robot Learning &amp; Manipulation</h3>
+            <p>Teaching robots to grasp, manipulate, and adapt through learned policies rather than hand-coded rules.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5ZM3 12v5l9 5 9-5v-5M12 12v10"/></svg></div>
+            <h3>Navigation &amp; Localisation</h3>
+            <p>Enabling autonomous systems to understand where they are and move safely through unpredictable spaces.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M8 12a4 4 0 1 1 4-4M8 12a4 4 0 1 0 4 4M16 12a4 4 0 1 0-4-4M16 12a4 4 0 1 1-4 4"/></svg></div>
+            <h3>Physical Human-Robot Interaction</h3>
+            <p>Designing safe, intuitive collaboration between people and robots sharing the same physical space.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Robotics Vision</h3>
+            <p>Perception systems that let robots see, interpret, and react to complex, cluttered environments.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1.1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1Z"/></svg></div>
+            <h3>Mechatronics, Sensing &amp; Control</h3>
+            <p>Integrating hardware, sensors, and control systems into cohesive, reliable robotic platforms.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10M10 21V3M16 21v-7M22 21H2"/></svg></div>
+            <h3>Optimisation &amp; Control</h3>
+            <p>Formal, mathematically grounded methods for planning and controlling robot behaviour under uncertainty.</p>
+          </div>
+        </div>
+
+        <div class="subhead reveal">
+          <h3>Industrial application domains</h3>
+          <span class="count">06 SECTORS</span>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4v-4l6 4V6l6-3v18H3Z"/></svg></div>
+            <h3>Manufacturing</h3>
+            <p>Complex assembly and quality control.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V7a1 1 0 0 1 1-1h9v10M3 16h10M13 16h8M16 10h3l2 3v3h-5v-6Z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg></div>
+            <h3>Logistics</h3>
+            <p>Last-mile delivery and autonomous warehouse management.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6c0 5.1-8.8 10.4-8.8 10.4S3.2 13.7 3.2 8.6a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/></svg></div>
+            <h3>Healthcare</h3>
+            <p>Assisted living and diagnostic support.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l5-4 5 4v12M13 21v-6h4v6M13 11h4v4"/></svg></div>
+            <h3>Construction &amp; Inspection</h3>
+            <p>Predictive maintenance for remote and hazardous assets.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-3l2-5h9l3 5h4v3M3 16h1M3 16h14M17 16h4"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="17.5" cy="17.5" r="1.6"/></svg></div>
+            <h3>Autonomous Driving</h3>
+            <p>Advanced mobility and environmental perception.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c1.8 1.2 3.5 1.2 5.3 0s3.5-1.2 5.3 0 3.5 1.2 5.3 0M2 12c1.8 1.2 3.5 1.2 5.3 0s3.5-1.2 5.3 0 3.5 1.2 5.3 0M12 3v6M9 5l3-2 3 2"/></svg></div>
+            <h3>Marine Robotics &amp; Applications</h3>
+            <p>Autonomous surface and underwater operations for environmental remediation and offshore asset inspection.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ CAAS ============ -->
+  <section class="view" id="caas">
+    <div class="wrap">
+      <section style="padding-top:56px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Cognition-as-a-Service</span>
+          <h2>A de-risked pathway from innovation to adoption.</h2>
+          <p>CaaS is our commercial arm, providing a structured pathway for industry partners to move from innovation to adoption — transforming research into reality.</p>
+        </div>
+
+        <div class="pipeline reveal">
+          <div class="stage">
+            <div class="n">01</div>
+            <h4>Research</h4>
+            <p>World-leading science in intelligent robotics and AI.</p>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          <div class="stage">
+            <div class="n">02</div>
+            <h4>Commercialisation</h4>
+            <p>Structured translation of lab breakthroughs into deployable systems.</p>
+          </div>
+          <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          <div class="stage">
+            <div class="n">03</div>
+            <h4>Adoption</h4>
+            <p>De-risked integration into partners' real-world operations.</p>
+          </div>
+        </div>
+
+        <div class="subhead reveal">
+          <h3>Our offerings</h3>
+        </div>
+        <div class="grid grid-3">
+          <div class="offer-card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg></div>
+            <h3>Strategic Advisory</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Robotics Readiness Reviews</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Strategic Roadmapping</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Horizon Scanning</li>
+            </ul>
+          </div>
+          <div class="offer-card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1 5 5L9 21l-5 1 1-5Z"/></svg></div>
+            <h3>Technical Implementation</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Requirements Capture</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Feasibility Studies</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Proof of Concepts (PoC)</li>
+            </ul>
+          </div>
+          <div class="offer-card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+            <h3>Infrastructure Access</h3>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Secure data pipelines</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>High-performance compute &amp; AI</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Living labs for real-world testing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="caas-cta reveal">
+          <div>
+            <h3>Ready to de-risk your next innovation?</h3>
+            <p>Talk to our CaaS team about a Robotics Readiness Review or a scoped Proof of Concept for your operation.</p>
+          </div>
+          <button class="btn btn-primary" data-tab="contact">Get in touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="view" id="projects">
+    <div class="wrap">
+      <section style="padding-top:56px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Current projects</span>
+          <h2>From funded grants to live platforms.</h2>
+          <p>A portfolio of research projects and strategic industry collaborations, applying our CaaS framework to real operational challenges.</p>
+        </div>
+
+        <div class="project-feature reveal">
+          <div class="pf-copy">
+            <span class="status-pill active"><span class="dot"></span> Active &middot; Feb 2025 – Jan 2028</span>
+            <h3>CogWaters</h3>
+            <p>Engineering a cognitive architecture for Unmanned Surface Vehicles (USVs) that delivers scalable, intelligent debris removal. CogWaters serves as a key driver for industrial ESG solutions and advanced robotic autonomy.</p>
+            <p><a href="https://dubairdi.ae/grant-initiatives-cogwaters-cognitive-architecture-in-unmanned-surface-vehicle-usv-for-debris-collection/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">Read the grant announcement &rarr;</a></p>
+          </div>
+          <div class="pf-meta">
+            <div class="m-row"><span class="k">Principal Investigator</span><span class="v">Claudio Zito</span></div>
+            <div class="m-row"><span class="k">HWUD Co-PIs</span><span class="v">Adrian Turcanu, Radu Mihailescu</span></div>
+            <div class="m-row"><span class="k">External Partners</span><span class="v">Prof Yvan Petillot — HWU Edinburgh, UK National Robotarium</span></div>
+            <div class="m-row"><span class="k">Funding</span><span class="v">Dubai RDI Grant Initiative</span></div>
+            <div class="m-row"><span class="k">Total Budget</span><span class="v">AED 1,497,883.57</span></div>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card project-card reveal">
+            <div class="pc-head">
+              <div>
+                <div class="icon-tile" style="margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c1.8 1.2 3.5 1.2 5.3 0s3.5-1.2 5.3 0 3.5 1.2 5.3 0M2 12c1.8 1.2 3.5 1.2 5.3 0s3.5-1.2 5.3 0 3.5 1.2 5.3 0M12 3v6M9 5l3-2 3 2"/></svg></div>
+                <h3>GBOT</h3>
+              </div>
+              <span class="status-pill complete"><span class="dot"></span> Completed</span>
+            </div>
+            <p>A robotic system for the detection and collection of debris on water surfaces, competing in autonomous and teleoperated tracks. Funded by Mubadala's Higher Education Student Competition, GBOT won third prize in the autonomous track.</p>
+            <div class="pc-foot">
+              <span>May 2024 – Apr 2025 &middot; Lead: Claudio Zito</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <div class="pc-head">
+              <div>
+                <div class="icon-tile" style="margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <h3>R2PO</h3>
+              </div>
+              <span class="status-pill active"><span class="dot"></span> Active</span>
+            </div>
+            <p>Resilient Robot Perception &amp; Operations — focused on robust perception for complex environments. By enabling machines to navigate uncertainty with high reliability, R2PO provides the foundational intelligence for safe, autonomous industrial operations.</p>
+            <div class="pc-foot">
+              <a href="https://hwudlabairoboticsresearch.github.io/R2PO/" target="_blank" rel="noopener">Project page
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <div class="pc-head">
+              <div>
+                <div class="icon-tile" style="margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5ZM3 12v5l9 5 9-5v-5M12 12v10"/></svg></div>
+                <h3>Trash Sorting Manipulator Challenge</h3>
+              </div>
+              <span class="status-pill complete"><span class="dot"></span> Completed</span>
+            </div>
+            <p>A manipulation challenge to pick trash from shelves and place it in the correct bin — entered in the Emirates Robot Competition (ERC 2025), where the team took home the winner's prize.</p>
+            <div class="pc-foot">
+              <span>Dec 2024 – Apr 2025 &middot; Lead: Claudio Zito</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <div class="pc-head">
+              <div>
+                <div class="icon-tile" style="margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+                <h3>Strategic Industry Collaborations</h3>
+              </div>
+              <span class="status-pill active"><span class="dot"></span> Ongoing</span>
+            </div>
+            <p>A portfolio of confidential collaborations with sector leaders spanning automated manufacturing, logistics, and critical infrastructure monitoring — applying our CaaS framework under strict IP protection protocols.</p>
+            <div class="pc-foot">
+              <span>Multiple partners &middot; NDA protected</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="view" id="team">
+    <div class="wrap">
+      <section style="padding-top:56px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our team</span>
+          <h2>From robot learning to social psychology.</h2>
+          <p>Our diverse team brings expertise from robot learning and computer vision to social psychology and rehabilitation.</p>
+        </div>
+
+        <div class="lead-card reveal">
+          <div class="avatar">CZ</div>
+          <div>
+            <h3>Dr. Claudio Zito</h3>
+            <div class="roles">Director, LAIRR <span>&middot;</span> CEO, LAIRR CaaS <span>&middot;</span> Assistant Professor (MACS) <span>&middot;</span> Dubai Rep, GRI in AI &amp; Robotics</div>
+            <p class="bio">Leads the lab's research direction and its commercial arm, with a research focus on robot learning, manipulation, and decision-making. Principal Investigator on CogWaters and GBOT.</p>
+            <div class="lead-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/claudio-zito/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg> Research profile
+              </a>
+              <a href="mailto:C.Zito@hw.ac.uk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> C.Zito@hw.ac.uk
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="subhead reveal">
+          <h3>Academic &amp; research faculty</h3>
+        </div>
+        <div class="grid grid-4" style="margin-bottom:56px;">
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">TS</div><div><h4>Talal Shaikh</h4><div class="role">Associate Professor (MACS)</div></div></div>
+            <p class="expertise">Computer Vision, Sensoring, M2M</p>
+            <div class="p-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/talal-shaikh/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:T.A.G.Shaikh@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">KK</div><div><h4>Keyvan Karim</h4><div class="role">Assistant Professor (MACS)</div></div></div>
+            <p class="expertise">Cybersecurity, Machine Learning, LLMs</p>
+            <div class="p-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/kayvan-karim/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:K.Karim@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">MA</div><div><h4>Dr. Mohamed Al-Musleh</h4><div class="role">Assistant Professor (TD)</div></div></div>
+            <p class="expertise">Autonomous Vehicles, Wearable Sensors</p>
+            <div class="p-links">
+              <a href="https://www.hw.ac.uk/profiles/dubai/school/tex/mohamed-al-musleh" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:M.Al-Musleh@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">AT</div><div><h4>Dr. Adrian Turcanu</h4><div class="role">Associate Professor (MACS)</div></div></div>
+            <p class="expertise">Mathematical Modelling, Formal Verification</p>
+            <div class="p-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/adrian-turcanu/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:A.Turcanu@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">CT</div><div><h4>Dr. Cristina Turcanu</h4><div class="role">Assistant Professor (MACS)</div></div></div>
+            <p class="expertise">Operational Testing, System Verification</p>
+            <div class="p-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/cristina-turcanu/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:C.Turcanu@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">YA</div><div><h4>Dr. Yasser Afaghani</h4><div class="role">Assistant Professor (EPS)</div></div></div>
+            <p class="expertise">Robot Manipulation</p>
+            <div class="p-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/ahmad-yasser-afaghani/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:Yasser.Afaghani@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">SM</div><div><h4>Dr. Shawgi Mounis</h4><div class="role">Assistant Professor (EPS)</div></div></div>
+            <p class="expertise">Rehabilitation Robotics</p>
+            <div class="p-links">
+              <a href="https://www.hw.ac.uk/profiles/uk/school/eps/faculty/shawgi-mounis" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="mailto:S.Mounis@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">CA</div><div><h4>Dr. Cakil Agnew</h4><div class="role">Associate Professor (SS)</div></div></div>
+            <p class="expertise">Safety Culture, High-Risk Industry</p>
+            <div class="p-links">
+              <a href="https://researchportal.hw.ac.uk/en/persons/cakil-agnew/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">MP</div><div><h4>Dr. Melissa Pavetich</h4><div class="role">Assistant Professor (SS)</div></div></div>
+            <p class="expertise">Social Psychology</p>
+            <div class="p-links"></div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">GB</div><div><h4>Dr. Girish Balasubramanian</h4><div class="role">Adjunct (EPS)</div></div></div>
+            <p class="expertise">Swarm Robotics</p>
+            <div class="p-links">
+              <a href="mailto:G.Balasubramanian@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="subhead reveal">
+          <h3>Research students</h3>
+        </div>
+        <div class="grid grid-4">
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">RA</div><div><h4>Rahaf Abu Hara</h4><div class="role">CDT-AIRI PhD Student (MACS)</div></div></div>
+            <p class="expertise">Cognitive Architecture, Marine Robotics</p>
+            <div class="p-links">
+              <a href="mailto:rha4001@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="view" id="contact">
+    <div class="wrap">
+      <section style="padding-top:56px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact &amp; links</span>
+          <h2>Let's build something intelligent.</h2>
+          <p>Whether you're an industry partner exploring CaaS, a prospective student, or a fellow researcher — here's where to find us.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel reveal">
+            <h3>Connect with LAIRR</h3>
+            <p>Follow our work, browse our code, or reach the director directly.</p>
+            <div class="contact-rows">
+              <div class="contact-row">
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.2 3.4-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg></div>
+                <div><div class="k">GitHub</div><div class="v">HWUDLabAIRoboticsResearch</div></div>
+                <a class="link-arrow" href="https://github.com/HWUDLabAIRoboticsResearch" target="_blank" rel="noopener" aria-label="Open GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              </div>
+              <div class="contact-row">
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.5 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.7 0 4.3 2.4 4.3 5.5v6.3ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5Z"/></svg></div>
+                <div><div class="k">LinkedIn</div><div class="v">LAIRR — Laboratory of AI and Robotics Research</div></div>
+                <a class="link-arrow" href="https://www.linkedin.com/in/lairr-laboratory-of-ai-and-robotics-research-844624340/" target="_blank" rel="noopener" aria-label="Open LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              </div>
+              <div class="contact-row">
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 8l10-5 10 5-10 5-10-5Zm4 3v5c0 1.7 2.7 3.5 6 3.5s6-1.8 6-3.5v-5"/></svg></div>
+                <div><div class="k">CDT-AIRI</div><div class="v">Centre for Doctoral Training in AI &amp; Robotics</div></div>
+                <a class="link-arrow" href="https://www.hw.ac.uk/dubai/research/robotics-and-ai" target="_blank" rel="noopener" aria-label="Open CDT-AIRI page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              </div>
+              <div class="contact-row">
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+                <div><div class="k">Director</div><div class="v">Dr. Claudio Zito</div></div>
+                <a class="link-arrow" href="mailto:C.Zito@hw.ac.uk" aria-label="Email director"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-card reveal">
+            <div class="loc-item">
+              <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+              <div><h4>Heriot-Watt University Dubai</h4><p>Dubai International Academic City, UAE</p></div>
+            </div>
+            <div class="loc-item">
+              <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 12l2 2 4-4"/></svg></div>
+              <div><h4>UK National Robotarium</h4><p>Home lab &amp; testing infrastructure, Heriot-Watt University</p></div>
+            </div>
+            <div class="loc-item">
+              <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></div>
+              <div><h4>Part of the GRI in AI &amp; Robotics</h4><p>Global Research Institute, Heriot-Watt University</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="hwu-chip"><img src="logos/HWU-global-logo.jpg" alt="Heriot-Watt University" /></span>
+      <p class="footer-note">LAIRR &mdash; Laboratory of AI and Robotics Research, Heriot-Watt University. Anchored at the UK National Robotarium.</p>
+    </div>
+    <div class="footer-links">
+      <a class="icon-btn" href="https://github.com/HWUDLabAIRoboticsResearch" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.2 3.4-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/lairr-laboratory-of-ai-and-robotics-research-844624340/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.5 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.7 0 4.3 2.4 4.3 5.5v6.3ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5Z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:18px;">
+    <p class="footer-note">&copy; <span id="year"></span> LAIRR, Heriot-Watt University. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/globe.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
