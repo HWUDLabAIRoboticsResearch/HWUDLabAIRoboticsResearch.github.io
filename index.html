@@ -829,6 +829,41 @@
           <p>Whether you're an industry partner exploring CaaS, a prospective student, or a fellow researcher — here's where to find us.</p>
         </div>
 
+        <div class="contact-panel reveal" style="margin-bottom:24px;">
+          <h3>Send us a message</h3>
+          <p>Tell us about your project, partnership idea, or question — we'll get back to you.</p>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-org">Organization <span style="color:var(--text-faint); font-weight:400;">(optional)</span></label>
+              <input type="text" id="cf-org" name="organization" autocomplete="organization" />
+            </div>
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" required></textarea>
+            </div>
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="cf-website">Website</label>
+              <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="cf-submit">Send message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+            <div class="form-status" id="cf-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
         <div class="contact-grid">
           <div class="contact-panel reveal">
             <h3>Connect with LAIRR</h3>
@@ -902,5 +937,6 @@
 <script src="js/globe.js"></script>
 <script src="js/main.js"></script>
 <script src="js/search.js"></script>
+<script src="js/contact-form.js"></script>
 </body>
 </html>
