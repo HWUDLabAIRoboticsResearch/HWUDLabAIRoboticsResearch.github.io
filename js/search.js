@@ -8,6 +8,7 @@
     projects: 'Projects',
     collaborations: 'Collaborations',
     publications: 'Publications',
+    news: 'News',
     team: 'Team',
     contact: 'Contact'
   };
@@ -19,6 +20,7 @@
     { tabId: 'projects', title: 'Projects', body: 'projects cogwaters gbot r2po trash sorting manipulator strategic industry collaborations current funded grants', el: null },
     { tabId: 'collaborations', title: 'Collaborations', body: 'collaborations industry partners dubai future foundation future os ecosystem nda de-risked adoption', el: null },
     { tabId: 'publications', title: 'Publications', body: 'publications papers research output impedance control prosthetics r2po', el: null },
+    { tabId: 'news', title: 'News', body: 'news updates announcements coming soon', el: null },
     { tabId: 'team', title: 'Team', body: 'team people faculty leadership claudio zito research students', el: null },
     { tabId: 'contact', title: 'Contact', body: 'contact links github linkedin cdt-airi director email location heriot-watt university dubai uk national robotarium', el: null }
   ];

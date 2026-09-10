@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var VALID_TABS = ['home', 'research', 'caas', 'projects', 'collaborations', 'publications', 'team', 'contact'];
+  var VALID_TABS = ['home', 'research', 'caas', 'projects', 'collaborations', 'publications', 'news', 'team', 'contact'];
   var root = document.documentElement;
 
   /* ---------------- Theme ---------------- */
