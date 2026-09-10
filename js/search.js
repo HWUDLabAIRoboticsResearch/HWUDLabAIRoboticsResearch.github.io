@@ -7,6 +7,7 @@
     caas: 'CaaS',
     projects: 'Projects',
     collaborations: 'Collaborations',
+    publications: 'Publications',
     team: 'Team',
     contact: 'Contact'
   };
@@ -17,11 +18,12 @@
     { tabId: 'caas', title: 'Cognition-as-a-Service (CaaS)', body: 'caas cognition as a service commercial arm offerings strategic advisory technical implementation infrastructure access de-risked innovation', el: null },
     { tabId: 'projects', title: 'Projects', body: 'projects cogwaters gbot r2po trash sorting manipulator strategic industry collaborations current funded grants', el: null },
     { tabId: 'collaborations', title: 'Collaborations', body: 'collaborations industry partners dubai future foundation future os ecosystem nda de-risked adoption', el: null },
+    { tabId: 'publications', title: 'Publications', body: 'publications papers research output impedance control prosthetics r2po', el: null },
     { tabId: 'team', title: 'Team', body: 'team people faculty leadership claudio zito research students', el: null },
     { tabId: 'contact', title: 'Contact', body: 'contact links github linkedin cdt-airi director email location heriot-watt university dubai uk national robotarium', el: null }
   ];
 
-  var BLOCK_SELECTOR = '.card, .project-feature, .offer-card, .mission-card, .quicklink, .lead-card, .contact-row, .location-card .loc-item, .pipeline .stage, .stat, .foundation-list .row';
+  var BLOCK_SELECTOR = '.card, .project-feature, .offer-card, .mission-card, .quicklink, .lead-card, .contact-row, .location-card .loc-item, .pipeline .stage, .stat, .foundation-list .row, .pub-item';
 
   function textOf(el) {
     if (!el) return '';
