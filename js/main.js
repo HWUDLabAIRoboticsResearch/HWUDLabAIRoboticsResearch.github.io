@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var VALID_TABS = ['home', 'research', 'caas', 'projects', 'team', 'contact'];
+  var VALID_TABS = ['home', 'research', 'caas', 'projects', 'collaborations', 'team', 'contact'];
   var root = document.documentElement;
 
   /* ---------------- Theme ---------------- */
@@ -62,6 +62,9 @@
       });
     });
 
+    window.LAIRR = window.LAIRR || {};
+    window.LAIRR.showTab = showTab;
+
     window.addEventListener('popstate', function () {
       var tab = (location.hash || '#home').replace('#', '');
       showTab(tab, { skipHash: true, skipScroll: false });
@@ -89,6 +92,36 @@
           closeMobilePanel();
         }
       });
+    }
+
+    /* ---------------- Logo/award marquee spotlight ---------------- */
+    var marquees = Array.prototype.slice.call(document.querySelectorAll('.logo-marquee'));
+    if (marquees.length) {
+      var marqueeState = marquees.map(function (marquee) {
+        return { el: marquee, tiles: Array.prototype.slice.call(marquee.querySelectorAll('.logo-tile, .award-badge')) };
+      });
+      (function spotlightTick() {
+        marqueeState.forEach(function (state) {
+          var mRect = state.el.getBoundingClientRect();
+          if (mRect.width < 10) return;
+          var centerX = mRect.left + mRect.width / 2;
+          var closestTile = null;
+          var closestDist = Infinity;
+          var dists = state.tiles.map(function (tile) {
+            var r = tile.getBoundingClientRect();
+            var dist = Math.abs((r.left + r.width / 2) - centerX);
+            if (dist < closestDist) { closestDist = dist; closestTile = tile; }
+            return dist;
+          });
+          var snapThreshold = closestTile ? closestTile.getBoundingClientRect().width * 0.3 : 0;
+          state.tiles.forEach(function (tile, i) {
+            var isCentered = tile === closestTile && dists[i] < snapThreshold;
+            tile.style.setProperty('--spot', isCentered ? '1' : '0');
+            tile.style.zIndex = isCentered ? 3 : 1;
+          });
+        });
+        requestAnimationFrame(spotlightTick);
+      })();
     }
 
     /* ---------------- Scroll reveal ---------------- */

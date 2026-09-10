@@ -27,11 +27,15 @@
     <button data-tab="research" aria-selected="false">Research</button>
     <button data-tab="caas" aria-selected="false">CaaS</button>
     <button data-tab="projects" aria-selected="false">Projects</button>
+    <button data-tab="collaborations" aria-selected="false">Collaborations</button>
     <button data-tab="team" aria-selected="false">Team</button>
     <button data-tab="contact" aria-selected="false">Contact</button>
   </nav>
 
   <div class="topbar-actions">
+    <button class="icon-btn" id="search-toggle" aria-label="Search the site" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </button>
     <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.7 6.7 0 0 0 10.5 10.5Z"/></svg>
@@ -46,10 +50,25 @@
     <button data-tab="research" aria-selected="false">Research</button>
     <button data-tab="caas" aria-selected="false">CaaS</button>
     <button data-tab="projects" aria-selected="false">Projects</button>
+    <button data-tab="collaborations" aria-selected="false">Collaborations</button>
     <button data-tab="team" aria-selected="false">Team</button>
     <button data-tab="contact" aria-selected="false">Contact</button>
   </div>
 </header>
+
+<div class="search-overlay" id="search-overlay" hidden role="dialog" aria-modal="true" aria-label="Search LAIRR">
+  <div class="search-backdrop" id="search-backdrop"></div>
+  <div class="search-panel">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" id="search-input" placeholder="Search research, projects, people, links..." autocomplete="off" spellcheck="false" />
+      <kbd class="search-esc">Esc</kbd>
+    </div>
+    <div class="search-results" id="search-results"></div>
+    <div class="search-empty" id="search-empty" hidden>No results for this search. Try a different term.</div>
+    <div class="search-hint">Jump to any section — Research, CaaS, Projects, Team, Contact — or search a person, topic, or project by name.</div>
+  </div>
+</div>
 
 <main id="main">
 
@@ -353,7 +372,6 @@
             <div class="m-row"><span class="k">HWUD Co-PIs</span><span class="v">Adrian Turcanu, Radu Mihailescu</span></div>
             <div class="m-row"><span class="k">External Partners</span><span class="v">Prof Yvan Petillot — HWU Edinburgh, UK National Robotarium</span></div>
             <div class="m-row"><span class="k">Funding</span><span class="v">Dubai RDI Grant Initiative</span></div>
-            <div class="m-row"><span class="k">Total Budget</span><span class="v">AED 1,497,883.57</span></div>
           </div>
         </div>
 
@@ -416,6 +434,152 @@
             </div>
           </div>
         </div>
+
+        <div class="subhead reveal" style="margin-top:56px;">
+          <h3>Student project highlights</h3>
+        </div>
+        <div class="grid grid-2">
+          <div class="card project-card reveal">
+            <div class="pc-head">
+              <div>
+                <div class="icon-tile" style="margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div>
+                <h3>LiZIP</h3>
+              </div>
+            </div>
+            <p>A lightweight, near-lossless compression framework for LiDAR point clouds, using a compact neural predictive-coding model to encode only sparse residuals. LiZIP outperforms industry-standard LASzip by 7.5&ndash;14.8% and Google Draco by 8.8&ndash;11.3% on the NuScenes and Argoverse datasets, easing the real-time processing and V2X bandwidth bottleneck in autonomous vehicles.</p>
+            <div class="pc-foot">
+              <span>Student project</span>
+              <span class="link-badges">
+                <a href="https://hwudlabairoboticsresearch.github.io/LiZIP/" target="_blank" rel="noopener" aria-label="Website" title="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg></a>
+                <a href="https://arxiv.org/abs/2603.23162" target="_blank" rel="noopener" aria-label="arXiv paper" title="arXiv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></a>
+                <a href="https://github.com/HWUDLabAIRoboticsResearch/LiZIP" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.2 3.4-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg></a>
+              </span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <div class="pc-head">
+              <div>
+                <div class="icon-tile" style="margin-bottom:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c1.8 1.2 3.5 1.2 5.3 0s3.5-1.2 5.3 0 3.5 1.2 5.3 0M2 12c1.8 1.2 3.5 1.2 5.3 0s3.5-1.2 5.3 0 3.5 1.2 5.3 0M12 3v6M9 5l3-2 3 2"/></svg></div>
+                <h3>CANSURF</h3>
+              </div>
+            </div>
+            <p>A vision system and open dataset for spotting small, reflective marine debris — aluminum cans on water — from an autonomous surface vehicle. Built from &sim;7.3k annotated images (expanded to &sim;57k via augmentation), it boosts YOLOv11 performance 12&times; over generic datasets; YOLOv11+ByteTrack gives the most stable multi-object tracking, while YOLOv11+SAHI maximizes far-field detection for single-can pickup missions.</p>
+            <div class="pc-foot">
+              <span>Student project</span>
+              <span class="link-badges">
+                <a href="https://ieeexplore.ieee.org/document/11318414" target="_blank" rel="noopener" aria-label="Paper" title="IEEE Xplore paper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></a>
+                <a href="https://github.com/HWUDLabAIRoboticsResearch/CANSURF" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.7 11.7 0 0 1 6.2 0c2.4-1.6 3.4-1.2 3.4-1.2.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg></a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="subhead reveal" style="margin-top:56px;">
+          <h3>Awards &amp; recognition</h3>
+        </div>
+        <div class="logo-marquee reveal">
+          <div class="logo-track">
+            <div class="spotlight-tile award-badge">
+              <div class="award-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4"/></svg></div>
+              <div class="award-caption"><span class="year">2025</span><span class="name">Dubai RDI Grant Initiative</span><span class="detail">CogWaters project</span></div>
+            </div>
+            <div class="spotlight-tile award-badge">
+              <div class="award-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4"/></svg></div>
+              <div class="award-caption"><span class="year">2025</span><span class="name">Mubadala HE Student Competition</span><span class="detail">3rd Place, Autonomous Track</span></div>
+            </div>
+            <div class="spotlight-tile award-badge">
+              <div class="award-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4"/></svg></div>
+              <div class="award-caption"><span class="year">2024</span><span class="name">Mubadala HE Student Competition</span><span class="detail">Finalist</span></div>
+            </div>
+            <div class="spotlight-tile award-badge" aria-hidden="true">
+              <div class="award-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4"/></svg></div>
+              <div class="award-caption"><span class="year">2025</span><span class="name">Dubai RDI Grant Initiative</span><span class="detail">CogWaters project</span></div>
+            </div>
+            <div class="spotlight-tile award-badge" aria-hidden="true">
+              <div class="award-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4"/></svg></div>
+              <div class="award-caption"><span class="year">2025</span><span class="name">Mubadala HE Student Competition</span><span class="detail">3rd Place, Autonomous Track</span></div>
+            </div>
+            <div class="spotlight-tile award-badge" aria-hidden="true">
+              <div class="award-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4"/></svg></div>
+              <div class="award-caption"><span class="year">2024</span><span class="name">Mubadala HE Student Competition</span><span class="detail">Finalist</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ COLLABORATIONS ============ -->
+  <section class="view" id="collaborations">
+    <div class="wrap">
+      <section style="padding-top:56px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Collaborations</span>
+          <h2>Building Dubai's innovation ecosystem, together.</h2>
+          <p>LAIRR works alongside government innovation bodies, technology ventures, and industry leaders across the UAE and beyond — applying our CaaS framework to de-risk adoption for every partner we work with.</p>
+        </div>
+
+        <div class="logo-marquee reveal">
+          <div class="logo-track">
+            <div class="logo-tile on-light"><img src="logos/partners/dubai-future-foundation.png" alt="Dubai Future Foundation" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/future-os.png" alt="Future OS" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/uknr.png" alt="UK National Robotarium" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/expo-city-dubai.png" alt="Expo City Dubai" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/sharjah-maritime.png" alt="Sharjah Maritime Academy" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/utek.png" alt="Utek" /></div>
+            <div class="logo-tile placeholder">+ NDA-protected partners</div>
+            <div class="logo-tile on-light"><img src="logos/partners/dubai-future-foundation.png" alt="Dubai Future Foundation" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/future-os.png" alt="Future OS" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/uknr.png" alt="UK National Robotarium" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/expo-city-dubai.png" alt="Expo City Dubai" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/sharjah-maritime.png" alt="Sharjah Maritime Academy" /></div>
+            <div class="logo-tile on-light"><img src="logos/partners/utek.png" alt="Utek" /></div>
+            <div class="logo-tile placeholder">+ NDA-protected partners</div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/dubai-future-foundation.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/future-os.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/uknr.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/expo-city-dubai.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/sharjah-maritime.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/utek.png" alt="" /></div>
+            <div class="logo-tile placeholder" aria-hidden="true">+ NDA-protected partners</div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/dubai-future-foundation.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/future-os.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/uknr.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/expo-city-dubai.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/sharjah-maritime.png" alt="" /></div>
+            <div class="logo-tile on-light" aria-hidden="true"><img src="logos/partners/utek.png" alt="" /></div>
+            <div class="logo-tile placeholder" aria-hidden="true">+ NDA-protected partners</div>
+          </div>
+        </div>
+
+        <div class="grid grid-3" style="margin-top:56px;">
+          <div class="mission-card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M8 12a4 4 0 1 1 4-4M8 12a4 4 0 1 0 4 4M16 12a4 4 0 1 0-4-4M16 12a4 4 0 1 1-4 4"/></svg></div>
+            <h3>Strategic Collaborations</h3>
+            <p>We partner with diverse sector leaders to deliver tailored innovation. Our CaaS framework ensures that projects — ranging from automated logistics to critical infrastructure — are delivered with strict adherence to confidentiality and IP protection.</p>
+          </div>
+          <div class="mission-card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div>
+            <h3>A de-risked way to collaborate</h3>
+            <p>Every collaboration runs through our CaaS pathway — Robotics Readiness Reviews, feasibility studies, and scoped proofs of concept — so partners can validate value before committing to full deployment.</p>
+          </div>
+          <div class="mission-card reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5ZM3 12l9 5 9-5"/></svg></div>
+            <h3>Confidentiality by default</h3>
+            <p>Most of our industry collaborations — spanning manufacturing, logistics, and critical infrastructure — operate under strict NDA and IP protection protocols and aren't named publicly here.</p>
+          </div>
+        </div>
+
+        <div class="caas-cta reveal" style="margin-top:56px;">
+          <div>
+            <h3>Want to become a collaborator?</h3>
+            <p>If you're exploring cognitive robotics for your operation, our CaaS team can scope a starting engagement.</p>
+          </div>
+          <button class="btn btn-primary" data-tab="contact">Get in touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
       </section>
     </div>
   </section>
@@ -426,8 +590,8 @@
       <section style="padding-top:56px;">
         <div class="section-head reveal">
           <span class="eyebrow">Our team</span>
-          <h2>From robot learning to social psychology.</h2>
-          <p>Our diverse team brings expertise from robot learning and computer vision to social psychology and rehabilitation.</p>
+          <h2>Empowered by People. Driven by Innovation.</h2>
+          <p>Our multi-disciplinary team accelerate innovation by bridging the gap between cutting-edge research in robot learning, computer vision, and autonomous systems and high-impact industrial deployment.</p>
         </div>
 
         <div class="lead-card reveal">
@@ -516,14 +680,6 @@
           </div>
 
           <div class="card person-card reveal">
-            <div class="p-head"><div class="avatar">CA</div><div><h4>Dr. Cakil Agnew</h4><div class="role">Associate Professor (SS)</div></div></div>
-            <p class="expertise">Safety Culture, High-Risk Industry</p>
-            <div class="p-links">
-              <a href="https://researchportal.hw.ac.uk/en/persons/cakil-agnew/" target="_blank" rel="noopener" aria-label="Research profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-            </div>
-          </div>
-
-          <div class="card person-card reveal">
             <div class="p-head"><div class="avatar">MP</div><div><h4>Dr. Melissa Pavetich</h4><div class="role">Assistant Professor (SS)</div></div></div>
             <p class="expertise">Social Psychology</p>
             <div class="p-links"></div>
@@ -539,6 +695,23 @@
         </div>
 
         <div class="subhead reveal">
+          <h3>International &amp; visiting partners</h3>
+        </div>
+        <div class="grid grid-2" style="margin-bottom:56px;">
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">YP</div><div><h4>Prof. Yvan Petillot</h4><div class="role">Co-Academic Lead, National Robotarium (EDI)</div></div></div>
+            <p class="expertise">Marine Robotics &amp; Autonomous Systems</p>
+            <div class="p-links"></div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">JS</div><div><h4>Prof. John See</h4><div class="role">Visiting Partner (Malaysia)</div></div></div>
+            <p class="expertise">Multimedia Signal Processing, Affective Computing, Visual Analytics</p>
+            <div class="p-links"></div>
+          </div>
+        </div>
+
+        <div class="subhead reveal">
           <h3>Research students</h3>
         </div>
         <div class="grid grid-4">
@@ -547,6 +720,26 @@
             <p class="expertise">Cognitive Architecture, Marine Robotics</p>
             <div class="p-links">
               <a href="mailto:rha4001@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+            </div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">AD</div><div><h4>Aditya Dahiya</h4><div class="role">CDT-AIRI PhD Student (MACS)</div></div></div>
+            <p class="expertise">3D Reconstruction, Structure from Motion</p>
+            <div class="p-links"></div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">ZA</div><div><h4>Zaid Aljundi</h4><div class="role">CDT-AIRI PhD Student (MACS)</div></div></div>
+            <p class="expertise">Computer Vision, Quantum, Machine Learning</p>
+            <div class="p-links"></div>
+          </div>
+
+          <div class="card person-card reveal">
+            <div class="p-head"><div class="avatar">AS</div><div><h4>Aditya Shibu</h4><div class="role">RA (MACS)</div></div></div>
+            <p class="expertise">Autonomous Vehicles, Computer Vision, Machine Learning</p>
+            <div class="p-links">
+              <a href="mailto:A.Shibu@hw.ac.uk" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
             </div>
           </div>
         </div>
@@ -636,5 +829,6 @@
 
 <script src="js/globe.js"></script>
 <script src="js/main.js"></script>
+<script src="js/search.js"></script>
 </body>
 </html>
