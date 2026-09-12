@@ -20,7 +20,12 @@
   var tiltAngle = BASE_TILT;
   var DPR = Math.min(window.devicePixelRatio || 1, 2);
   var size = 420, R = 168, cx = 210, cy = 210;
-  var spinAngle = 0;
+  // Default resting rotation: centers the front of the globe on ~35°E
+  // (Europe/Africa/Middle East) instead of the raw default of 90°E (India),
+  // so Edinburgh/Dubai/Malaysia read left-to-right the way people expect
+  // from a standard world map, rather than looking randomly scattered.
+  var INITIAL_SPIN = -55 * Math.PI / 180;
+  var spinAngle = INITIAL_SPIN;
   var lastT = null;
 
   var AUTO_RESUME_DELAY = 1400;
@@ -135,7 +140,15 @@
      [135,45],[140,50],[150,55],[160,60],[170,65],[150,70],[130,73],[110,73],[90,72],[70,70],
      [60,65],[50,60],[40,55],[35,50],[35,45]],
     [[113,-22],[118,-20],[130,-12],[142,-11],[145,-17],[150,-22],[153,-28],[150,-35],
-     [143,-38],[137,-35],[131,-32],[125,-33],[115,-34],[113,-22]]
+     [143,-38],[137,-35],[131,-32],[125,-33],[115,-34],[113,-22]],
+    // British Isles (a separate island landmass from mainland Europe — Edinburgh sits here)
+    [[-8,50],[-8,59],[-1,61],[2,53],[-2,50],[-8,50]],
+    // Arabian Peninsula / Gulf (Dubai/UAE sit here — the mainland Asia polygon above
+    // stops around lat 25 and doesn't dip south into this peninsula on its own)
+    [[34,32],[36,28],[40,20],[44,13],[50,13],[59,18],[59,27],[53,29],[47,30],[40,33],[34,32]],
+    // Malay Peninsula / Sumatra (Malaysia sits here — mainland Asia polygon stops
+    // around lat 10 in this longitude range and misses it)
+    [[95,22],[108,24],[115,10],[106,-2],[95,-2],[93,10],[95,22]]
   ];
 
   function pointInPolygon(lon, lat, poly) {
