@@ -634,22 +634,64 @@
         <div class="section-head reveal">
           <span class="eyebrow">News</span>
           <h2>Dispatches from the lab.</h2>
-          <p>Project milestones, publications, competition results, and events — landing on this page soon.</p>
+          <p>Project milestones, publications, competition results, and events from the lab.</p>
         </div>
 
-        <div class="coming-soon reveal">
-          <div class="coming-soon-orb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9-9M4 11a5 5 0 0 1 5-5M4 11v9h4v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6h4v-5"/><circle cx="18" cy="9" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <div class="news-carousel reveal" data-carousel>
+          <div class="nc-viewport">
+            <div class="nc-track">
+              <article class="nc-slide">
+                <div class="nc-media"><img src="team/lairr-team-sept-2026.jpg" alt="The LAIRR team in the lab at Heriot-Watt University Dubai" /></div>
+                <div class="nc-body">
+                  <span class="status-pill active"><span class="dot"></span> Sep 2026</span>
+                  <h3>LAIRR is ready for the new academic year</h3>
+                  <p>New semester, same mission &mdash; the lab is back in session with a full bench of ongoing projects, industry collaborations, and new faces joining the team.</p>
+                  <div class="pc-foot"><span>Lab update</span></div>
+                </div>
+              </article>
+              <article class="nc-slide">
+                <div class="nc-media nc-media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+                <div class="nc-body">
+                  <span class="status-pill active"><span class="dot"></span> Sep 2026</span>
+                  <h3>R2PO accepted to NeurIPS 2026</h3>
+                  <p>Our paper, <strong>R2PO: Reflective Prompted Policy Optimization &mdash; Trajectory-Grounded Revision and Salience Bias</strong>, has been accepted for publication at NeurIPS 2026.</p>
+                  <div class="pc-foot">
+                    <span>Publication</span>
+                    <span class="link-badges">
+                      <a href="https://lnkd.in/p/dBFNWwhM" target="_blank" rel="noopener" aria-label="LinkedIn post" title="LinkedIn post"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+                      <a href="http://arxiv.org/abs/2605.08315" target="_blank" rel="noopener" aria-label="Paper" title="arXiv paper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></a>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
-          <span class="coming-soon-badge">Coming soon<span class="cursor">_</span></span>
-          <h3>We're building this page.</h3>
-          <p class="coming-soon-copy">Soon you'll find a live feed of lab updates here — new papers, project milestones, competition wins, and events. In the meantime, follow along on GitHub and LinkedIn.</p>
-          <div class="coming-soon-actions">
-            <a class="btn btn-ghost" href="https://github.com/HWUDLabAIRoboticsResearch" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/lairr-laboratory-of-ai-and-robotics-research-844624340/" target="_blank" rel="noopener">LinkedIn</a>
-            <button class="btn btn-primary" data-tab="contact">Get in touch
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </button>
+          <button class="nc-arrow nc-prev" type="button" aria-label="Previous update"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="nc-arrow nc-next" type="button" aria-label="Next update"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+          <div class="nc-dots" role="tablist" aria-label="News updates"></div>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:40px;">
+          <div class="card news-tile reveal">
+            <div class="nt-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></div>
+            <div class="nt-date">Sep 2026</div>
+            <h3>LAIRR is ready for the new academic year</h3>
+            <p>New semester, same mission &mdash; the lab is back in session with a full bench of ongoing projects, industry collaborations, and new faces joining the team.</p>
+            <div class="pc-foot"><span>Lab update</span></div>
+          </div>
+
+          <div class="card news-tile reveal">
+            <div class="nt-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
+            <div class="nt-date">Sep 2026</div>
+            <h3>R2PO accepted to NeurIPS 2026</h3>
+            <p>Our paper, <strong>R2PO: Reflective Prompted Policy Optimization &mdash; Trajectory-Grounded Revision and Salience Bias</strong>, has been accepted for publication at NeurIPS 2026.</p>
+            <div class="pc-foot">
+              <span>Publication</span>
+              <span class="link-badges">
+                <a href="https://lnkd.in/p/dBFNWwhM" target="_blank" rel="noopener" aria-label="LinkedIn post" title="LinkedIn post"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+                <a href="http://arxiv.org/abs/2605.08315" target="_blank" rel="noopener" aria-label="Paper" title="arXiv paper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></a>
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -942,5 +984,6 @@
 <script src="js/main.js"></script>
 <script src="js/search.js"></script>
 <script src="js/contact-form.js"></script>
+<script src="js/news-carousel.js"></script>
 </body>
 </html>
