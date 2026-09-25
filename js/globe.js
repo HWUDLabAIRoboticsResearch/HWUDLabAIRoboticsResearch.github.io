@@ -9,7 +9,7 @@
 
   var LOCATIONS = [
     { key: 'edinburgh', name: 'Edinburgh', lat: 55.95, lon: -3.19, primary: false },
-    { key: 'dubai', name: 'Dubai — LAIRR', lat: 25.20, lon: 55.27, primary: true },
+    { key: 'dubai', name: 'Dubai (LAIRR)', lat: 25.20, lon: 55.27, primary: true },
     { key: 'malaysia', name: 'Malaysia', lat: 2.93, lon: 101.70, primary: false }
   ];
   var ARC_PAIRS = [[1, 0], [1, 2]];
@@ -20,10 +20,6 @@
   var tiltAngle = BASE_TILT;
   var DPR = Math.min(window.devicePixelRatio || 1, 2);
   var size = 420, R = 168, cx = 210, cy = 210;
-  // Default resting rotation: centers the front of the globe on ~35°E
-  // (Europe/Africa/Middle East) instead of the raw default of 90°E (India),
-  // so Edinburgh/Dubai/Malaysia read left-to-right the way people expect
-  // from a standard world map, rather than looking randomly scattered.
   var INITIAL_SPIN = -55 * Math.PI / 180;
   var spinAngle = INITIAL_SPIN;
   var lastT = null;
@@ -124,8 +120,6 @@
   }
   var graticule = buildGraticule();
 
-  // Rough, stylised continent outlines [lon, lat] — a low-poly approximation
-  // for an ambient dot-matrix landmass texture, not for geographic accuracy.
   var CONTINENTS = [
     [[-165,68],[-155,60],[-130,55],[-125,48],[-124,40],[-117,32],[-105,22],[-97,16],[-90,14],
      [-80,9],[-75,18],[-70,25],[-65,35],[-60,45],[-55,50],[-65,60],[-80,68],[-100,72],[-130,70],[-150,70],[-165,68]],
@@ -141,13 +135,8 @@
      [60,65],[50,60],[40,55],[35,50],[35,45]],
     [[113,-22],[118,-20],[130,-12],[142,-11],[145,-17],[150,-22],[153,-28],[150,-35],
      [143,-38],[137,-35],[131,-32],[125,-33],[115,-34],[113,-22]],
-    // British Isles (a separate island landmass from mainland Europe — Edinburgh sits here)
     [[-8,50],[-8,59],[-1,61],[2,53],[-2,50],[-8,50]],
-    // Arabian Peninsula / Gulf (Dubai/UAE sit here — the mainland Asia polygon above
-    // stops around lat 25 and doesn't dip south into this peninsula on its own)
     [[34,32],[36,28],[40,20],[44,13],[50,13],[59,18],[59,27],[53,29],[47,30],[40,33],[34,32]],
-    // Malay Peninsula / Sumatra (Malaysia sits here — mainland Asia polygon stops
-    // around lat 10 in this longitude range and misses it)
     [[95,22],[108,24],[115,10],[106,-2],[95,-2],[93,10],[95,22]]
   ];
 

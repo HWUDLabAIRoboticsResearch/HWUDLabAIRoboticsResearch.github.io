@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LAIRR — Laboratory of AI and Robotics Research
+   LAIRR: Laboratory of AI and Robotics Research
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -28,6 +28,8 @@
   --radius-lg: 20px;
   --radius-md: 14px;
   --radius-sm: 9px;
+  --glass-bg: rgba(16, 22, 38, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.12);
   color-scheme: dark;
 }
 
@@ -49,6 +51,8 @@
   --glow: rgba(8, 145, 178, 0.16);
   --chip-bg: rgba(8, 145, 178, 0.08);
   --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-border: rgba(15, 23, 42, 0.1);
   color-scheme: light;
 }
 
@@ -71,6 +75,8 @@
     --glow: rgba(8, 145, 178, 0.16);
     --chip-bg: rgba(8, 145, 178, 0.08);
     --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.68);
+    --glass-border: rgba(15, 23, 42, 0.1);
     color-scheme: light;
   }
 }
@@ -906,6 +912,76 @@ section { padding: 88px 0; }
 .news-tile h3 { font-size: 1.05rem; margin-bottom: 8px; line-height: 1.35; padding-right: 44px; }
 .news-tile p { color: var(--text-dim); font-size: 0.92rem; line-height: 1.55; }
 .news-tile .pc-foot { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-faint); }
+
+.news-tile[data-news-modal],
+.nc-slide[data-news-modal] { cursor: pointer; }
+.news-tile[data-news-modal]:focus-visible,
+.nc-slide[data-news-modal]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- News modal ---------- */
+.news-modal { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.news-modal[hidden] { display: none; }
+.nm-backdrop { position: absolute; inset: 0; background: rgba(4, 8, 16, 0.6); backdrop-filter: blur(3px); animation: nmFadeIn 0.2s ease; }
+.nm-panel {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  animation: nmPopIn 0.22s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.nm-panel::-webkit-scrollbar { display: none; }
+@keyframes nmFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes nmPopIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nm-backdrop, .nm-panel { animation: none; }
+}
+.nm-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(8, 12, 22, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.nm-close:hover { border-color: rgba(34, 211, 238, 0.6); background: rgba(8, 12, 22, 0.75); }
+.nm-close svg { width: 16px; height: 16px; }
+.nm-photo { width: 100%; height: min(34vh, 260px); overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+.nm-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.nm-body { padding: 40px; display: flex; flex-direction: column; gap: 14px; }
+.nm-body .status-pill { align-self: flex-start; }
+.nm-body h3 { font-size: 1.35rem; line-height: 1.3; }
+.nm-body p { color: var(--text-dim); font-size: 0.96rem; line-height: 1.65; }
+.nm-body .nm-caption { color: var(--text-faint); font-size: 0.82rem; font-style: italic; }
+.nm-body .pc-foot { margin-top: 4px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-faint); }
+@media (max-width: 560px) {
+  .nm-body { padding: 28px 24px; }
+}
 
 /* ---------- Team ---------- */
 .lead-card {

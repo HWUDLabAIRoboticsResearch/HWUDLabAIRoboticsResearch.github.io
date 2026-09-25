@@ -43,7 +43,7 @@
         body: JSON.stringify(payload)
       })
         .then(function () {
-          showStatus('success', "Thanks — your message has been sent. We'll get back to you soon.");
+          showStatus('success', "Thanks! Your message has been sent. We'll get back to you soon.");
           form.reset();
         })
         .catch(function () {
@@ -57,13 +57,13 @@
       statusEl.className = 'form-status';
 
       if (isPlaceholder(CONTACT_CONFIG.endpoint)) {
-        showStatus('error', "The contact form isn't connected yet — please email us directly for now.");
+        showStatus('error', "The contact form isn't connected yet. Please email us directly for now.");
         return;
       }
 
       var honeypot = form.querySelector('[name="website"]');
       if (honeypot && honeypot.value) {
-        showStatus('success', "Thanks — your message has been sent. We'll get back to you soon.");
+        showStatus('success', "Thanks! Your message has been sent. We'll get back to you soon.");
         form.reset();
         return;
       }
